@@ -1,0 +1,35 @@
+debug: False
+output_dir: "./ckpts/llama_medical"
+
+model:
+  model_name: "meta-llama/Llama-3.2-1B-Instruct"
+  model_dtype: "bf16"
+  use_lora: False
+  use_chat_template: False # only relevant for causal language models
+  use_structured_output_generation: True # only relevant for causal language models
+
+data:
+  data_dir: "./data/medical_text_summarization"
+  max_length: 2560
+  max_target_length: 512
+
+training:
+  seed: 42
+  optim: "adamw_torch_fused"
+  num_train_epochs: 3
+  learning_rate: 0.000008
+  lr_scheduler_type: "constant"
+  warmup_ratio: 0.03
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: True
+  max_grad_norm: 0.3
+  bf16: True
+  tf32: True
+
+generation:
+  max_new_tokens: 2048
+
+wandb:
+  entity: gregorlied
+  project: nlp4sg

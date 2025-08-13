@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+__pycache__
+*.egg-info
+*.lock
+*.vscode
+*.csv
+
+ckpts
+wandb

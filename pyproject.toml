@@ -1,0 +1,34 @@
+[project]
+name = "nlp4sg"
+version = "0.0.1"
+description = "NLP for Social Good."
+authors = [
+    { name = "Gregor Lied" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+
+dependencies = [
+    "bert_score",
+    "bitsandbytes>=0.42.0",
+    "datasets>=3.6.0",
+    "evaluate>=0.4.3",
+    "nltk>=3.9.1",
+    "numpy>=2.0.2",
+    "pandas>=2.2.2",
+    "peft==0.15.2",
+    "rouge_score",
+    "torch",
+    "tqdm",
+    "transformers==4.52.3",
+    "trl==0.18.1",
+    "wandb>=0.19.11",
+    "xgrammar==0.1.21",
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nlp4sg"]
