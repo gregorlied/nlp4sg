@@ -51,6 +51,7 @@ def eval(config):
 
     # create model and tokenzier
     print("Load model and tokenizer from checkpoint...")
+    config["model"]["use_lora"] = False
     model_name = config["model"]["model_name"]
     config["model"]["model_name"] = config["output_dir"]
     model, tokenizer = create_model_and_tokenizer(config)  
