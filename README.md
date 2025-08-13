@@ -1,6 +1,6 @@
 # NLP for Social Good - Text Summarization
 
-This repository contains training and inference code developed as part of the "NLP for Social Good" course at TU Berlin.
+This repository contains code developed as part of the "NLP for Social Good" course at TU Berlin.
 
 For quick demonstrations, please visit the following Hugging Face Spaces:
 
@@ -38,8 +38,8 @@ pip install -e .
 Download the datasets from the [shared drive](https://drive.google.com/drive/folders/1ZgtFEc-UYp7kCviZE9okj9fSIqZIVHCB?usp=drive_link) and place them in the following structure: 
 
 ```text
-data/clinical_report_summarization/train.csv
-data/clinical_report_summarization/test.csv
+data/medical_text_summarization/train.csv
+data/medical_text_summarization/test.csv
 
 data/news_scitldr_dialog_summarization/train.csv
 data/news_scitldr_dialog_summarization/test.csv
