@@ -5,7 +5,7 @@ model:
   model_name: "meta-llama/Llama-3.2-1B-Instruct"
   model_dtype: "bf16"
   use_lora: False
-  use_chat_template: False # only relevant for causal language models
+  use_chat_template: True # only relevant for causal language models
   use_structured_output_generation: True # only relevant for causal language models
 
 data:
@@ -17,7 +17,7 @@ training:
   seed: 42
   optim: "adamw_torch_fused"
   num_train_epochs: 3
-  learning_rate: 0.000008
+  learning_rate: 0.00001
   lr_scheduler_type: "constant"
   warmup_ratio: 0.03
   per_device_train_batch_size: 1
